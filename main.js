@@ -47,7 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const targetPage = icon.getAttribute("data-page");
       if (targetPage === "search") {
-        window.location.href = "/proxy.html";
+        fetch('proxy.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('search').innerHTML = html;
+            switchPage('search');
+          })
+          .catch(err => console.error('Failed to load proxy.html:', err));
       } else {
         switchPage(targetPage, true);
       }
