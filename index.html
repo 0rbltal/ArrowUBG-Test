@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ArrowUBG</title>
-<meta name="theme-color" content="#00baff"/>
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArrowUBG</title>
+    <meta name="theme-color" content="#00baff" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-<div class="stars-layer" aria-hidden="true"></div>
-<div class="nebula-layer" aria-hidden="true"></div>
-<nav class="neon-sidebar" role="navigation" aria-label="Primary">
-<ul class="nav-list">
-<li class="nav-icon active" data-page="home" aria-label="Home" tabindex="0">
-<i class="fas fa-home"></i>
-<span class="tooltip">Home</span>
-<span class="active-bar"></span>
-</li>
-<li class="nav-icon" data-page="games" aria-label="Games" tabindex="0">
-<i class="fas fa-gamepad"></i>
-<span class="tooltip">Games</span>
-<span class="active-bar"></span>
-</li>
-<li class="nav-icon" data-page="apps" aria-label="Apps" tabindex="0">
-<i class="fas fa-mobile-alt"></i>
-<span class="tooltip">Apps</span>
-<span class="active-bar"></span>
-</li>
-<li class="nav-icon" data-page="search" aria-label="Proxy" tabindex="0">
-<i class="fas fa-search"></i>
-<span class="tooltip">Proxy</span>
-<span class="active-bar"></span>
-</li>
-<li class="nav-icon" data-page="donate" aria-label="Donate" tabindex="0">
-<i class="fas fa-heart"></i>
-<span class="tooltip">Donate</span>
-<span class="active-bar"></span>
-</li>
-<li class="nav-icon" data-page="settings" aria-label="Settings" tabindex="0">
-<i class="fas fa-cog"></i>
-<span class="tooltip">Settings</span>
-<span class="active-bar"></span>
-</li>
-</ul>
-</nav>
-<main id="content" role="main">
-<section id="home" class="page active" aria-labelledby="home-title">
-<h1 id="home-title" class="logo">ArrowUBG</h1>
-<p class="tagline">Peak gaming. Peak style. Peak freedom.</p>
-<div class="pulse-ring" aria-hidden="true"></div>
-</section>
-<section id="games" class="page" aria-labelledby="games-title">
-<h2 id="games-title" class="visually-hidden">Games</h2>
-<div id="game-grid" class="game-grid"></div>
-</section>
-<section id="apps" class="page" aria-labelledby="apps-title">
-<h2 id="apps-title" class="visually-hidden">Apps</h2>
-<div id="apps-grid" class="app-grid"></div>
-</section>
-<section id="search" class="page" aria-labelledby="search-title">
-<h2 id="search-title" class="visually-hidden">Proxy</h2>
-</section>
-<section id="donate" class="page" aria-labelledby="donate-title">
-<h2 id="donate-title">Support ArrowUBG</h2>
-<ul class="donate-list" aria-label="Donation wallets">
-<li>
-<strong>Option 1 (E_yo):</strong>
-<a href="bitcoin:bc1qzchqv8uyu0z9t3nzc3vt96kstv7z3xy032x0e0" target="_blank" rel="noopener">
-bc1qzchqv8uyu0z9t3nzc3vt96kstv7z3xy032x0e0
-</a>
-</li>
-<li>
-<strong>Option 2 (goaded):</strong>
-<a href="bitcoin:bc1qdm4eys343m9pqmh49jegwzfsaes4my86wggwad" target="_blank" rel="noopener">
-bc1qdm4eys343m9pqmh49jegwzfsaes4my86wggwad
-</a>
-</li>
-</ul>
-</section>
-<section id="settings" class="page" aria-labelledby="settings-title">
-<h2 id="settings-title">Settings</h2>
-<ul class="settings-list">
-<li><i class="fas fa-adjust"></i> Theme toggle (light/dark)</li>
-<li><i class="fas fa-language"></i> Language selector</li>
-<li><i class="fas fa-info-circle"></i> About ArrowUBG</li>
-</ul>
-<section id="settings" class="page" aria-labelledby="settings-title">
-</section>
-</section>
-</main>
-<button class="skip-link" onclick="document.getElementById('content').focus()">Skip to content</button>
-<script src="main.js"></script>
-<script src="games.js"></script>
-<script src="apps.js"></script>
-<script src="settings.js"></script>
+    <div class="stars-layer" aria-hidden="true"></div>
+    <div class="nebula-layer" aria-hidden="true"></div>
+    <nav class="neon-sidebar" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+            <li class="nav-icon active" data-page="home" aria-label="Home" tabindex="0">
+                <i class="fas fa-home"></i>
+                <span class="tooltip">Home</span>
+                <span class="active-bar"></span>
+            </li>
+            <li class="nav-icon" data-page="games" aria-label="Games" tabindex="0">
+                <i class="fas fa-gamepad"></i>
+                <span class="tooltip">Games</span>
+                <span class="active-bar"></span>
+            </li>
+            <li class="nav-icon" data-page="apps" aria-label="Apps" tabindex="0">
+                <i class="fas fa-mobile-alt"></i>
+                <span class="tooltip">Apps</span>
+                <span class="active-bar"></span>
+            </li>
+            <li class="nav-icon" data-page="search" aria-label="Proxy" tabindex="0">
+                <i class="fas fa-search"></i>
+                <span class="tooltip">Proxy</span>
+                <span class="active-bar"></span>
+            </li>
+            <li class="nav-icon" data-page="donate" aria-label="Donate" tabindex="0">
+                <i class="fas fa-heart"></i>
+                <span class="tooltip">Donate</span>
+                <span class="active-bar"></span>
+            </li>
+            <li class="nav-icon" data-page="settings" aria-label="Settings" tabindex="0">
+                <i class="fas fa-cog"></i>
+                <span class="tooltip">Settings</span>
+                <span class="active-bar"></span>
+            </li>
+        </ul>
+    </nav>
+    <main id="content" role="main">
+        <section id="home" class="page active" aria-labelledby="home-title">
+            <h1 id="home-title" class="logo">ArrowUBG</h1>
+            <p class="tagline">Peak gaming. Peak style. Peak freedom.</p>
+            <div class="pulse-ring" aria-hidden="true"></div>
+        </section>
+        <section id="games" class="page" aria-labelledby="games-title">
+            <h2 id="games-title" class="visually-hidden">Games</h2>
+            <div id="game-grid" class="game-grid"></div>
+        </section>
+        <section id="apps" class="page" aria-labelledby="apps-title">
+            <h2 id="apps-title" class="visually-hidden">Apps</h2>
+            <div id="apps-grid" class="app-grid"></div>
+        </section>
+        <section id="search" class="page" aria-labelledby="search-title">
+            <h2 id="search-title" class="visually-hidden">Proxy</h2>
+        </section>
+        <section id="donate" class="page" aria-labelledby="donate-title">
+            <h2 id="donate-title">Support ArrowUBG</h2>
+            <ul class="donate-list" aria-label="Donation wallets">
+                <li>
+                    <strong>Option 1 (E_yo):</strong>
+                    <a href="bitcoin:bc1qzchqv8uyu0z9t3nzc3vt96kstv7z3xy032x0e0" target="_blank" rel="noopener">
+                        bc1qzchqv8uyu0z9t3nzc3vt96kstv7z3xy032x0e0
+                    </a>
+                </li>
+                <li>
+                    <strong>Option 2 (goaded):</strong>
+                    <a href="bitcoin:bc1qdm4eys343m9pqmh49jegwzfsaes4my86wggwad" target="_blank" rel="noopener">
+                        bc1qdm4eys343m9pqmh49jegwzfsaes4my86wggwad
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="settings" class="page" aria-labelledby="settings-title">
+            <h2 id="settings-title">Settings</h2>
+            <ul class="settings-list">
+                <li><i class="fas fa-adjust"></i> Theme toggle (light/dark)</li>
+                <li><i class="fas fa-language"></i> Language selector</li>
+                <li><i class="fas fa-info-circle"></i> About ArrowUBG</li>
+            </ul>
+            <section id="settings" class="page" aria-labelledby="settings-title">
+            </section>
+        </section>
+    </main>
+    <button class="skip-link" onclick="document.getElementById('content').focus()">Skip to content</button>
+    <script src="main.js"></script>
+    <script src="games.js"></script>
+    <script src="apps.js"></script>
+    <script src="settings.js"></script>
 </body>
+
 </html>
