@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "/home": "home",
     "/games": "games",
     "/apps": "apps",
-    "/settings": "settings"
+    "/settings": "settings",
+    "/proxy.html": "search"
   };
   const validPages = Array.from(pages).map(p => p.id);
 
@@ -38,6 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const path = location.pathname.replace(/\/+$/, "") || "/";
     const target = routeMap[path] || "home";
     switchPage(target, false);
+
+    if (path === "/proxy.html") {
+      fetch('proxy.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('search').innerHTML = html;
+        })
+        .catch(err => console.error('Failed to load proxy.html:', err));
+    }
   }
 
   window.addEventListener("popstate", routeFromPath);
@@ -47,15 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const targetPage = icon.getAttribute("data-page");
       if (targetPage === "search") {
+        const proxyURL = "/ArrowUBG-Test/proxy.html";
+        history.pushState({ page: targetPage }, "", proxyURL);
         fetch('proxy.html')
           .then(response => response.text())
           .then(html => {
             document.getElementById('search').innerHTML = html;
-            switchPage('search');
+            switchPage('search', false);
           })
           .catch(err => console.error('Failed to load proxy.html:', err));
       } else {
-        switchPage(targetPage, true);
+        const path = Object.keys(routeMap).find(k => routeMap[k] === targetPage) || "/";
+        history.pushState({ page: targetPage }, "", path);
+        switchPage(targetPage, false);
       }
     });
   });
